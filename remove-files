@@ -1,0 +1,2 @@
+#!/bin/bash
+rm NameApp.java NameApp.class RandomPlate.java RandomPlate.class
