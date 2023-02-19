@@ -1,0 +1,5 @@
+#!/bin/bash
+javac Dog.java
+javac Kennel.java
+javac TestMethods.java
+javac MyMethods.java

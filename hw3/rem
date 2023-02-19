@@ -1,0 +1,2 @@
+#!/bin/bash
+rm Dog.java Dog.class Kennel.java Kennel.class MyMethods.java MyMethods.class TestMethods.java TestMethods.class
