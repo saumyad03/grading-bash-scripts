@@ -1,0 +1,8 @@
+#!/bin/bash
+javac Dog.java
+javac Kennel.java
+javac MyMethods.java
+javac TestMethods.java
+
+`echo ./kennel-input` | java Kennel
+java TestMethods

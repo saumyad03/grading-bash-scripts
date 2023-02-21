@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Sam"
+echo "1"
+echo "Yam"
+echo "4"
