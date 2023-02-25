@@ -1,0 +1,2 @@
+#!/bin/bash
+rm Circle.java CircleTest.java Circle.class CircleTest.class
