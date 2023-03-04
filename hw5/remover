@@ -1,0 +1,2 @@
+#!/bin/bash
+rm Book.java Book.class TestBooks.java TestBooks.class

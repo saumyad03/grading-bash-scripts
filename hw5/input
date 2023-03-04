@@ -1,0 +1,12 @@
+#!/bin/bash
+echo 5
+echo "a b c"
+echo 1
+echo "d e f"
+echo 2
+echo "g h i"
+echo 5
+echo "j k l"
+echo 3
+echo "m n o"
+echo 1

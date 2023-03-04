@@ -1,0 +1,19 @@
+#!/bin/bash
+# checks to see if first line has package in it
+# removes it before compilation if so
+
+first=$(head -n 1 Book.java | cut -c 1-7)
+if [ $first == "package" ]; then
+	sed -i '1d' Book.java
+fi
+javac Book.java
+
+first=$(head -n 1 TestBooks.java | cut -c 1-7)
+if [ $first == "package" ]; then
+	sed -i '1d' TestBooks.java
+fi
+javac TestBooks.java
+
+cat Book.java
+cat TestBooks.java
+$(echo ./input) | java TestBooks
