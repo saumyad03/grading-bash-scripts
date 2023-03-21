@@ -1,0 +1,16 @@
+#!/bin/bash
+# if incorrect file name, renames file and replaces class definition
+if [ ! -e "TestArrays.java" ]; then
+	name="$(ls [Tt]est[Aa]rray*)"
+	mv "$name" "TestArrays.java"
+	name="$(echo $name | cut -d'.' -f 1)"
+	sed -i "s/$name/TestArrays/" TestArrays.java
+fi
+# removes package statement some students use in their code
+if [ "$(head -n 1 TestArrays.java | cut -c 1-7)" == "package" ]; then
+	sed -i '1d' TestArrays.java
+fi
+# compiles, runs, and removes files(s)
+javac TestArrays.java
+java TestArrays
+rm TestArrays.java TestArrays.class
