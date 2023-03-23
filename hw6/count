@@ -1,0 +1,12 @@
+#!/bin/bash
+count=0
+line=1
+while read num
+do
+	let count=$count+$num
+	if [ "$line" -ge "11" ]; then
+		break
+	fi
+	let line++
+done < output
+echo $count
