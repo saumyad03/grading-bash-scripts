@@ -1,0 +1,14 @@
+#!/bin/bash
+clear
+if [ ! -e "TestArraysAndRecursion.java" ]; then
+	name="$(ls [Tt]est[Aa]rray*[Aa]nd[Rr]ecursion*)"
+	mv "$name" "TestArraysAndRecursion.java"
+	name="$(echo $name | cut -d'.' -f 1)"
+	sed -i "s/$name/TestArraysAndRecursion/" TestArraysAndRecursion.java
+fi
+if [ "$(head -n 1 TestArraysAndRecursion.java | cut -c 1-7)" == "package" ]; then
+	sed -i '1d' TestArraysAndRecursion.java
+fi
+javac TestArraysAndRecursion.java
+java TestArraysAndRecursion
+rm TestArraysAndRecursion.java TestArraysAndRecursion.class
