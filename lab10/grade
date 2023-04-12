@@ -1,0 +1,4 @@
+#!/bin/bash
+javac SortedIntList.java
+java ListTest
+rm SortedIntList.java SortedIntList.class
