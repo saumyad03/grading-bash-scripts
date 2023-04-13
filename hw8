@@ -1,0 +1,36 @@
+#!/bin/bash
+# ensures the directory it is in is called submissions to prevent unintended consequences
+path=$(pwd)
+if [ $(basename $path) != "submissions" ]; then
+	echo "Run this file in a directory called \"submissions\" with the assignment submissions"
+	exit 0
+fi
+# organization
+for file in *
+do
+	# skips itself and files not part of submissions
+	if [ "$file" == "organize" || "$file" == "grade" || "$file" == "Coin.java" ]; then
+		continue
+	fi
+	# cuts student name and actual file name and assigns to variables
+	studentName=$(echo "$file" | cut -f 1 -d '_')
+	fileName=$(echo "$file" | cut -f 4 -d "_")
+	# creates directory with student name if it doesn't exist
+	if [ ! -e "$studentName" ]; then
+		mkdir "$studentName"
+	fi
+	# figures out which file it is, renames it correctly, and replaces incorrect name in
+	# file if necessary
+	if [ ! -z "$(echo $fileName | grep -E "[mM]onetary[cC]oin*")" ]; then
+		mv "$file" "MonetaryCoin.java"
+		fileName="$(echo $fileName | cut -f 1 -d ".")"
+		sed -i "s/$fileName/MonetaryCoin/" "MonetaryCoin.java"
+		file="MonetaryCoin.java"
+	elif [ ! -z "$(echo $fileName | grep -E "[tT]est[mM][cC]oin*")" ]; then
+		mv "$file" "TestMCoins.java"
+		fileName="$(echo $fileName | cut -f 1 -d ".")"
+		sed -i "s/$fileName/TestMCoins/" "TestMCoins.java"
+		file="TestMCoins.java"
+	fi
+	mv "$file" "$studentName"
+done
