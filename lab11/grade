@@ -1,0 +1,5 @@
+#!/bin/bash
+javac Cylinder.java
+javac PaintThings.java
+java PaintThings
+rm Cylinder.java Cylinder.class PaintThings.java PaintThings.class
