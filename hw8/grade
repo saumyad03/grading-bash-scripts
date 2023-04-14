@@ -1,0 +1,27 @@
+#!/bin/bash
+for student in *
+do
+	# skips non-directories
+	if [ ! -d "$student" ]; then
+		continue
+	fi
+	# removes package statement in MonetaryCoin.java
+	if [ "$(head -n 1 ${student}/MonetaryCoin.java | cut -c 1-7)" == "package" ]; then
+		sed -i '1d' ${student}/MonetaryCoin.java
+	fi
+	# removes package statement in TestMCoins.java
+	if [ "$(head -n 1 ${student}/TestMCoins.java | cut -c 1-7)" == "package" ]; then
+		sed -i '1d' ${student}/TestMCoins.java
+	fi
+	# copies requisite file into student's directory
+	cp Coin.java "$student"
+	# compiles all java files
+	javac ${student}/Coin.java
+	javac ${student}/MonetaryCoin.java
+	javac ${student}/TestMCoins.java
+	# outputs name of student
+	echo "$student"
+	# runs driver
+	java ${student}/TestMCoins
+	echo
+done

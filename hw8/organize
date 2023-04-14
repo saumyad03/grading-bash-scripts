@@ -9,7 +9,7 @@ fi
 for file in *
 do
 	# skips itself and files not part of submissions
-	if [ "$file" == "organize" || "$file" == "grade" || "$file" == "Coin.java" ]; then
+	if [[ "$file" == "organize" || "$file" == "grade" || "$file" == "Coin.java" || "$file" == "submissions.zip" ]]; then
 		continue
 	fi
 	# cuts student name and actual file name and assigns to variables
