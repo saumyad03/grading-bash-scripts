@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Hit enter to see next student's output"
 for student in *
 do
 	# skips non-directories
@@ -16,12 +17,17 @@ do
 	# copies requisite file into student's directory
 	cp Coin.java "$student"
 	# compiles all java files
-	javac ${student}/Coin.java
-	javac ${student}/MonetaryCoin.java
-	javac ${student}/TestMCoins.java
+	cd "$student"
+	javac Coin.java
+	javac MonetaryCoin.java
+	javac TestMCoins.java
+	# outputs when grader wants to see
+	read #waits for hit enter before showing more output
+	echo
 	# outputs name of student
 	echo "$student"
 	# runs driver
-	java ${student}/TestMCoins
+	java TestMCoins
+	cd ..
 	echo
 done
