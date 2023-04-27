@@ -1,0 +1,2 @@
+#!/bin/bash
+rm Payable.java Payable.class NoOvertimeException.java NoOvertimeException.class TestExceptionsV1.java TestExceptionsV1.class TestExceptionsV2.java TestExceptionsV2.class
