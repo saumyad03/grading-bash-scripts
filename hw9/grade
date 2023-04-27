@@ -10,11 +10,11 @@ echo NoOverTimeException Header and Constructor
 cat NoOverTimeException.java
 echo
 echo Normal Execution
-java TestExceptionsV1
+`echo ./normal-input` | java TestExceptionsV1
 echo
 echo Exception Execution
-java TestExceptionsV1
+`echo ./exception-input` | java TestExceptionsV1
 echo
 echo Caught Execution - Message + Continuing + Valid + Average
-java TestExceptionsV2
-rm Payable.java Payable.class NoOvertimeException.java NoOvertimeException.class TestExceptionsV1.java TestExceptionsV1.class TestExceptionsV2.java TestExceptionsV2.class
+`echo ./caught-input` | java TestExceptionsV2
+echo "SHOULD BE: 2, 47.5 or 23.75"

@@ -1,0 +1,28 @@
+#!/bin/bash
+echo 4
+echo 1
+echo 1
+echo 1
+echo 1
+echo 2
+echo 50
+echo 2
+echo 2
+echo 2
+echo 2
+echo 2
+echo 30
+echo 3
+echo 3
+echo 3
+echo 3
+echo 1
+echo 35
+echo 4
+echo 4
+echo 4
+echo 4
+echo 2
+echo 60
+# valid = 2
+# average = (60 + 35) / 2 = 47.5 OR (0 + 60 + 35 + 0) / 4 = 23.75
