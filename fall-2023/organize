@@ -13,7 +13,7 @@ do
 		mkdir "$STUDENT_NAME"
 	fi
 	#fixing multiple submissions file naming issue - no penalty
-	[[ ! -z "$(echo "$FILE_NAME" | grep -E "^*\(*\).java$")" ]] && FILE_NAME=$(echo "$FILE_NAME" | cut -f 1 -d ' ')$(echo "$FILE_NAME" | cut -f 2 -d ')')
+	[[ ! -z "$(echo "$FILE_NAME" | grep -E "^.*-.\.java$")" ]] && echo "$FILE_NAME" && FILE_NAME=$(echo "$FILE_NAME" | cut -f 1 -d '-').java && echo "$FILE_NAME"
 	mv "$FILE" "$FILE_NAME"
 	# placing student's file in their directory
 	mv "$FILE_NAME" "$STUDENT_NAME"
