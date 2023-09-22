@@ -6,4 +6,4 @@ This repository contains Bash scripts I developed to automate my grading process
 - This file assumes that it is being executed in a directory that contains a submissions folder, containing all the student submissions that were downloaded from Canvas and extracted from the zip file.
 - Creates directories that correspond to each student, containing that student's files
 - Corrects file naming issues that arise from downloading files from Canvas in bulk and multiple student submissions on Canvas
-- Submissions containing underscores, although uncommon, are problematic
+- Submissions containing underscores, although uncommon, are problematic for this script
