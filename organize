@@ -1,4 +1,5 @@
 #!/bin/bash
+unzip submissions.zip -d submissions > /dev/null
 cd submissions
 for FILE in *
 do

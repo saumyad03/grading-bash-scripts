@@ -1,0 +1,8 @@
+#!/bin/bash
+cd submissions/$1
+javac NameApp.java RandomPlate.java
+$(echo ../../input) | java NameApp
+java RandomPlate
+cat NameApp.java
+cat RandomPlate.java
+cd ..
