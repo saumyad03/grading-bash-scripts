@@ -9,13 +9,12 @@ do
 	STUDENT_NAME=$(echo "$FILE" | cut -f 1 -d '_')
 	FILE_NAME=$(echo "$FILE" | cut -f 4 -d '_')
 	# creating student directory if it doesn't exist
-	if [ ! -d "$STUDENT_NAME" ]
-	then
-		mkdir "$STUDENT_NAME"
-	fi
+	[[ ! -d "$STUDENT_NAME" ]] && mkdir "$STUDENT_NAME"
 	#fixing multiple submissions file naming issue - no penalty
 	[[ ! -z "$(echo "$FILE_NAME" | grep -E "^.*-.\.java$")" ]] && FILE_NAME=$(echo "$FILE_NAME" | cut -f 1 -d '-').java
 	mv "$FILE" "$FILE_NAME"
+	#removing package declarations - no penalty
+	[[ "$(head -n 1 "$FILE_NAME" | cut -c 1-7)" == "package" ]] && sed -i '1d' "$FILE_NAME"
 	# placing student's file in their directory
 	mv "$FILE_NAME" "$STUDENT_NAME"
 done
