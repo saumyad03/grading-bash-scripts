@@ -18,5 +18,5 @@ As of now, I'm considering utilizing the following strategy for grading class de
 - Extract the method using a more general RegEx pattern
 - Compare this extracted method with a specific RegEx pattern that encodes a correctly written method
 - If the extracted method doesn't match the specific RegEx pattern, manually check the code to see if the method is written correctly.
-<!-- end of the list -->
+
 For the driver program, I will create a script that stores the user input. I will also create a grader that compiles, runs, and feeds the aforementioned input into the java program. Then, I will check the output of the program to ensure it is correct. Additionally, I will look at the file to ensure the student correctly instantiated and updated the objects.
