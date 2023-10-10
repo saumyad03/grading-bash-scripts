@@ -14,9 +14,7 @@ This file is run in the submission folder's parent directory with the student's 
 #### input
 This file should be in the same directory as the previous file. Since one of the files being graded requires user input, this file it used to store the inputs that will be fed into the file being graded by the grader.
 ### hw3
-As of now, I'm considering utilizing the following strategy for grading class definitions:
-- Extract the method using a more general RegEx pattern
-- Compare this extracted method with a specific RegEx pattern that encodes a correctly written method
-- If the extracted method doesn't match the specific RegEx pattern, manually check the code to see if the method is written correctly.
+Initially, I was considering using RegEx patterns to extract methods from each class, comparing them to another RegEx pattern that is a correct implementation of the method. Based on this comparison, I could assign the credit for each method. Although I am eager to try this, I do not believe it is worth investing the time in doing this for this assignment. Instead, I will manually check the class to ensure methods are implemented correctly. However, I will utilize a grading script that compiles the files, runs them, and feeds input into the driver. Then, I will check the output and file to ensure it was done correctly.
+#### grade
 
-For the driver program, I will create a script that stores the user input. I will also create a grader that compiles, runs, and feeds the aforementioned input into the java program. Then, I will check the output of the program to ensure it is correct. Additionally, I will look at the file to ensure the student correctly instantiated and updated the objects.
+#### input
