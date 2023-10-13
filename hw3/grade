@@ -1,0 +1,7 @@
+#!/bin/bash
+cd submissions/$1
+javac Book.java TestBook.java
+$(echo ../../input) | java TestBook
+cat Book.java
+cat TestBook.java
+cd ..
