@@ -1,0 +1,6 @@
+#!/bin/bash
+for DIRECTORY in ./submissions/*
+do
+	cp Die.java $DIRECTORY
+	cp Point.java $DIRECTORY
+done
