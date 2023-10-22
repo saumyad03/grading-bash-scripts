@@ -1,0 +1,15 @@
+#!/bin/bash
+cd submissions
+for DIRECTORY in *
+do
+	cd $DIRECTORY
+	javac *.java
+	read -p "Continue?"
+	cat Dog.java
+	read -p "Continue?"
+	$(echo ../../input) | java TestDog
+	read -p "Continue?"
+	cat TestDog.java
+	read -p "Continue?"
+	cd ..
+done

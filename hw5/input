@@ -1,0 +1,10 @@
+#!/bin/bash
+echo 4
+echo "Russel Terrier"
+echo 15
+echo "Labrador"
+echo 10
+echo "Labrador"
+echo 7
+echo "Yorkshire"
+echo 9
