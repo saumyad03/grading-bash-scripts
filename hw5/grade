@@ -12,5 +12,6 @@ do
 	read -p "Continue?"
 	cat TestDog.java
 	read -p "Continue?"
+	clear
 	cd ..
 done
