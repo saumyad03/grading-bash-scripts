@@ -18,6 +18,10 @@ This file should be in the same directory as the previous file. Since one of the
 Instructions identical to hw2.
 #### input
 Instructions identical to hw2.
+### hw4
+Due to the complexity of this homework, it was manually graded.
+#### dependencies
+This file is run in the submission folder's parent directory. Die.java and Point.java must also be in the same directory as this file, because this script places these files in each of the student's respective directories.
 ## Ideas
 For grading class definitions, we can utilize RegEx patterns as follows:
 1. Extract method using more generic RegEx pattern
