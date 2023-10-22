@@ -2,6 +2,7 @@
 cd submissions
 for DIRECTORY in *
 do
+	echo $DIRECTORY
 	cd $DIRECTORY
 	javac *.java
 	read -p "Continue?"
