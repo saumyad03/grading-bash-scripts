@@ -35,4 +35,5 @@ For grading class definitions, we can utilize RegEx patterns as follows:
 1. Extract method using more generic RegEx pattern
 2. Grade method using specific RegEx pattern representative of the correct answer
 3. If RegEx doesn't match, manually check method
+
 For grading methods, we can write Java programs that call the methods with multiple test cases in order to ensure method accuracy.
