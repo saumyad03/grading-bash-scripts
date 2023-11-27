@@ -23,13 +23,16 @@ Due to the complexity of this homework, it was manually graded.
 #### dependencies
 This file is run in the submission folder's parent directory. Die.java and Point.java must also be in the same directory as this file, because this script places these files in each of the student's respective directories.
 ### hw5
-While previous grading scripts automated grading by letting a TA pass the student directory's name as a command line argument to the grader, this one automatically iterates through each student's directory.
 #### grade
-This file is run in the submission folder's parent directory. It goes into each student's directory, compiles the files, runs them with automatically fed input, and displays that to ensure the code is written correctly. This script allows the TA to go through each of these steps individually, clicking enter once they're ready to move on. That way, they may assign points appropriately on the rubric for each step without being bombarded with terminal output.
+While previous grading scripts automated grading by letting a TA pass the student directory's name as a command line argument to the grader, this one automatically iterates through each student's directory. This file is run in the submission folder's parent directory. It goes into each student's directory, compiles the files, runs them with automatically fed input, and displays that to ensure the code is written correctly. This script allows the TA to go through each of these steps individually, clicking enter once they're ready to move on. That way, they may assign points appropriately on the rubric for each step without being bombarded with terminal output.
 ### input
 This file should be in the same directory as grade. It stores user input needed for the driver program and is used by the grade script.
+### hw6 & hw7
+This homework involves writing methods. Due to the many ways in which these methods can be written and prevalence of mistakes, I graded these manually.
 ## Ideas
 For grading class definitions, we can utilize RegEx patterns as follows:
 1. Extract method using more generic RegEx pattern
 2. Grade method using specific RegEx pattern representative of the correct answer
 3. If RegEx doesn't match, manually check method
+
+For grading methods, we can write Java programs that call the methods with multiple test cases in order to ensure method accuracy.
