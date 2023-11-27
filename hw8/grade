@@ -1,0 +1,15 @@
+#!/bin/bash
+cd submissions
+for DIRECTORY in *
+do
+	cd $DIRECTORY
+	echo $DIRECTORY
+	javac TestRecursion.java
+	read -p "Continue?"
+	cat TestRecursion.java
+	read -p "Continue?"
+	java TestRecursion
+	read -p "Continue?"
+	cd ..
+	clear
+done
