@@ -1,0 +1,20 @@
+#!/bin/bash
+cd submissions
+for DIRECTORY in *
+do
+	echo $DIRECTORY
+	cd $DIRECTORY
+	javac Coin.java MonetaryCoin.java TestMCoins.java
+	read -p "Continue?"
+	echo
+	cat MonetaryCoin.java
+	read -p "Continue?"
+	echo
+	cat TestMCoins.java
+	read -p "Continue?"
+	echo
+	java TestMCoins
+	read -p "Continue?"
+	clear
+	cd ..
+done

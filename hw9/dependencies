@@ -1,0 +1,6 @@
+#!/bin/bash
+cd submissions
+for DIRECTORY in *
+do
+	cp  ../Coin.java $DIRECTORY
+done
