@@ -1,0 +1,16 @@
+#!/bin/bash
+FILES=$(find dependencies -type f) # stored as dependency/filename
+cd submissions
+for DIRECTORY in *
+do
+	cd $DIRECTORY
+	for FILE in $FILES
+	do
+		NAME=$(basename $FILE)
+		if [ ! -e $NAME ]; then
+			cp  ../../$FILE .
+		fi
+	done
+	cd ..
+done
+cd ..
